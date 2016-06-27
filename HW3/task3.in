@@ -1,0 +1,17 @@
+(\x.x) y
+
+let x = \x.y z \q.t in (\q.r let q = x in (q) let t = t in (t)) q \x.x let q = q in (q)
+
+'a15
+q:'a0
+r:'a0->'a2->(('a0->'a14)->'a14)->'a15
+t:'a2
+y:'a4->('a7->'a2)->'a8
+z:'a4
+
+'a15
+q:'a0
+r:'a9->'a10
+t:'a2
+y:'a4->'a6
+z:'a4
