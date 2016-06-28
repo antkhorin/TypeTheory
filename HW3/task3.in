@@ -1,17 +1,8 @@
-(\x.x) y
-
-let x = \x.y z \q.t in (\q.r let q = x in (q) let t = t in (t)) q \x.x let q = q in (q)
-
-'a15
-q:'a0
-r:'a0->'a2->(('a0->'a14)->'a14)->'a15
-t:'a2
-y:'a4->('a7->'a2)->'a8
-z:'a4
-
-'a15
-q:'a0
-r:'a9->'a10
-t:'a2
-y:'a4->'a6
-z:'a4
+let sq = \f.\x.f (f x) in
+let r0 = \f.\x.sq sq sq sq sq sq sq sq f x in
+let r1 = \f.\x.r0 r0 r0 r0 r0 r0 r0 r0 f x in
+let r2 = \f.\x.r1 r1 r1 r1 r1 r1 r1 r1 f x in
+let r3 = \f.\x.r2 r2 r2 r2 r2 r2 r2 r2 f x in
+let r4 = \f.\x.r3 r3 r3 r3 r3 r3 r3 r3 f x in
+let r5 = \f.\x.r4 r4 r4 r4 r4 r4 r4 r4 f x in
+r5

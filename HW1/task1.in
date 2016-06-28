@@ -1,2 +1,8 @@
-(\f.(\x.f (x x)) (\x.f (x x))) (\f.\n.(\n.n (\x.\x.\y.y) \x.\y.x) n (\f.\x.f x) ((\a.\b.a ((\a.\b.\f.\x.a f (b f x)) b) \f.\x.x) n (f ((\n.(\p.p \x.\y.x) (n (\p.\f.f ((\p.p \x.\y.y) p) ((\n.\f.\x.f (n f x)) ((\p.p \x.\y.y) p))) (\f.f (\f.\x.x) (\f.\x.x)))) n)))) \f.\x.f (f (f (f (f (f x)))))
+(\s.\k.\i.(((s ((s (k s)) ((s ((s (k s)) ((s (k k)) i))) (k ((s (k (s ((s (k s)) ((s (k (s (k (s ((s ((s ((s i) (k (k (k i))))) (k ((s (k k)) i)))) (k ((s ((s (k s)) ((s (k k)) i))) (k i))))))))) ((s ((s (k s)) ((s (k k)) ((s (k s)) ((s (k (s (k ((s ((s (k s)) ((s (k k)) ((s (k s)) ((s (k k)) i))))) (k ((s ((s (k s)) ((s (k k)) i))) (k i)))))))) ((s ((s (k s)) ((s (k k)) i))) (k i))))))) (k ((s (k k)) i)))))))) ((s (k k)) ((s ((s (k s)) ((s (k k)) i))) (k i)))))))) (k (k ((s ((s (k s)) ((s (k k)) i))) ((s ((s (k s)) ((s (k k)) i))) ((s ((s (k s)) ((s (k k)) i))) (k i))))))) ((s ((s ((s (k s)) ((s (k k)) i))) (k ((s i) i)))) ((s ((s (k s)) ((s (k k)) i))) (k ((s i) i))))) ((s ((s (k s)) ((s (k (s (k s)))) ((s ((s (k s)) ((s (k (s (k s)))) ((s (k (s (k k)))) ((s ((s (k s)) ((s (k k)) i))) (k ((s (k (s (k (s i))))) ((s (k (s (k k)))) ((s (k (s i))) ((s (k k)) i)))))))))) (k (k ((s (k k)) i))))))) (k (k (k i))))) (\x.\y.\z.x z (y z)) (\x.\y.x) (\x.x)
+
+
+((\f.(\x.f (x x)) (\x.f (x x))) (\f.\n.(\n.n (\x.\x.\y.y) \x.\y.x) n (\f.\x.f x) ((\a.\b.a ((\a.\b.\f.\x.a f (b f x)) b) \f.\x.x) n (f ((\n.(\p.p \x.\y.x) (n (\p.\f.f ((\p.p \x.\y.y) p) ((\n.\f.\x.f (n f x)) ((\p.p \x.\y.y) p))) (\f.f (\f.\x.x) (\f.\x.x)))) n))))) \f.\x.f (f (f (f (f (f x)))))
 Факториал 6
+
+532573
+2394

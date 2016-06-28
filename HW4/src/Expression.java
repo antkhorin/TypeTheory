@@ -1,9 +1,10 @@
 public abstract class Expression {
 
-    public AbstractExpression expression1;
-    public AbstractExpression expression2;
+    public Expression expression1;
+    public Expression expression2;
+    public Expression parent;
 
-    public Expression(AbstractExpression expression1, AbstractExpression expression2) {
+    public Expression(Expression expression1, Expression expression2) {
         this.expression1 = expression1;
         this.expression2 = expression2;
     }

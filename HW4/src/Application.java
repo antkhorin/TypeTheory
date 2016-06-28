@@ -1,6 +1,6 @@
 public class Application extends Expression {
 
-    public Application(AbstractExpression expression1, AbstractExpression expression2) {
+    public Application(Expression expression1, Expression expression2) {
         super(expression1, expression2);
     }
 
@@ -16,10 +16,18 @@ public class Application extends Expression {
             s += expression1.toString();
         }
         s += " ";
-        if (expression2.getType() != 'v') {
-            s += "(" + expression2.toString() + ")";
+        if (expression2.getType() == 'a') {
+            String tmp = expression2.toString();
+            if (tmp.charAt(0) != '(') {
+                s += "(" + tmp + ")";
+            } else {
+                s += tmp;
+            }
         } else {
             s += expression2.toString();
+        }
+        if (expression2.getType() == 'l') {
+            s = "(" + s + ")";
         }
         return s;
     }

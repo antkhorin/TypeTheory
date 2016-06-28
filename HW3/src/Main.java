@@ -12,7 +12,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("task3.in"));
         BufferedWriter writer = new BufferedWriter(new FileWriter("task3.out"));
-        String s = reader.readLine();
+        String s = "";
+        String s1;
+        while ((s1 = reader.readLine()) != null) {
+            s += s1 + "\n";
+        }
         Expression expression = parse(s);
         Map<String, String> free = new HashMap<>();
         uniqueVariable(expression, new HashMap<>(), free);
@@ -66,27 +70,10 @@ public class Main {
                     j++;
                 }
                 Expression tmp1 = parse(s.substring(i, j));
-                i = j + 5;
-                j = i;
-                b = 1;
-                while (b > 0) {
-                    if (s.charAt(j) == '(') {
-                        b++;
-                    } else if (s.charAt(j) == ')') {
-                        b--;
-                    }
-                    j++;
-                }
-                tmp = new Let(tmp, tmp1, parse(s.substring(i, j)));
-                i = j;
-                if (expression == null) {
-                    expression = tmp;
-                } else {
-                    expression = new Application(expression, tmp);
-                }
+                return new Let(tmp, tmp1, parse(s.substring(j + 4, s.length())));
             } else if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
                 int j = i + 1;
-                while (s.charAt(j) >= 'a' && s.charAt(j) <= 'z' || s.charAt(j) == '\'') {
+                while (s.charAt(j) >= 'a' && s.charAt(j) <= 'z' || s.charAt(j) == '\'' || s.charAt(j) >= '0' && s.charAt(j) <= '9') {
                     j++;
                 }
                 tmp = new Variable(s.substring(i, j));
